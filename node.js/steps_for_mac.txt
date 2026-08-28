@@ -7,7 +7,6 @@ get node.js current version (latest) -> v26.8.1 (for now)
 ### for now the currect latest version is good but LTS version is the long term support version
 
 v26.8.1     macOS    nvm     npm
-
 now open vscode terminal or mac's terminal and past the commands
 
 ------------------------------------------------------------------------------------------------
@@ -29,4 +28,3 @@ now open vscode terminal or mac's terminal and past the commands
     # Should print "11.19.0".
 ------------------------------------------------------------------------------------------------
 official nvm git repo: https://github.com/nvm-sh/nvm
-
