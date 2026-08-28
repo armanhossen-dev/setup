@@ -1,0 +1,32 @@
+goto web: https://nodejs.org/en/download
+
+general way:
+select -> nvm (node version manager) to switch between different version of node js packages
+get node.js current version (latest) -> v26.8.1 (for now)
+
+### for now the currect latest version is good but LTS version is the long term support version
+
+v26.8.1     macOS    nvm     npm
+
+now open vscode terminal or mac's terminal and past the commands
+
+------------------------------------------------------------------------------------------------
+    # Download and install nvm:
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.7/install.sh | bash
+
+    # in lieu of restarting the shell
+    \. "$HOME/.nvm/nvm.sh"
+
+    # Download and install Node.js:
+    nvm install 26
+
+    # Verify the Node.js version:
+    node -v 
+    # Should print "v26.8.1".
+
+    # Verify npm version:
+    npm -v 
+    # Should print "11.19.0".
+------------------------------------------------------------------------------------------------
+official nvm git repo: https://github.com/nvm-sh/nvm
+
