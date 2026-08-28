@@ -1,2 +1,2 @@
 # setup
-![NODE js](https://github.com/armanhossen-dev/setup/tree/main/node.js)
+[NODE js](https://github.com/armanhossen-dev/setup/tree/main/node.js)
