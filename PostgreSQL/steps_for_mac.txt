@@ -1,1 +1,90 @@
 https://youtu.be/a78hxM4-99A
+
+setup: PostgreSQL
+goto-> web: https://www.postgresql.org/
+-> download button
+-> macOS button
+
+under: Interactive installer by EDB
+-> Download the installer
+https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+
+lates version of postgresql will be on the tables top
+under the mac os x click the button, dmj file will be download
+after download intstall it 
+it will be installed in 
+/Library/PostgreSQL/18
+
+selected components will be installed just leave as default
+
+now password for connecting the postgressql server
+example:
+root
+
+now for the port, where the postgressql will default run
+its 5432
+
+now current settings:
+
+Installation Directory: /Library/PostgreSQL/18
+Server Installation Directory: /Library/PostgreSQL/18
+Data Directory: /Library/PostgreSQL/18/data
+Database Port: 5432
+Database Superuser: postgres
+Operating System Account: postgres
+Database Service: postgresql-18
+Command Line Tools Installation Directory: /Library/PostgreSQL/18
+pgAdmin4 Installation Directory: /Library/PostgreSQL/18/pgAdmin 4
+Stack Builder Installation Directory: /Library/PostgreSQL/18
+Installation Log: /tmp/install-postgresql.log
+
+next next install
+
+after installation, uncheck the options it shows, launch stack builder at exit, 
+then finish.
+
+now it mainly creates  a folder not just application
+in application folder, i will find -> folder named PostgreSQL 18
+get inside this folder and double Click pgAdmin, this tool will open then
+- double click on the server
+-- it will ask for password, (give the pass)
+-- then save , ok
+
+its goint to connect with postgresql server,
+
+to create a new db in, right click on the Database and create 
+general
+- give name
+- owner: postgres (user)
+navigate i can modify the Defination, security, Parameters, Advanced, SQL,
+moving to the tab SQL, i can see the command for creating sql
+- then save, 
+
+now drop down the 
+    demoDB i just created in its 
+        Schemas i can create tables
+            under public
+                i can see tables
+                 right click on the table option -> create 
+                    now creating a simple table
+                    example:
+                    -table name: names
+                    going to the columns section
+                    i can press the + icon on the column table to add
+                    new colomns and set PK primary key and other options
+                    id integer primary key
+                    name text 
+                    -save
+
+now on the 'names' table - right click 
+- view/Edit Data > All Rows
+
+now form terminal:
+cd /Library/PostgreSQL/18/bin
+ls 
+
+to run/ connect to postgresql server 
+# oid2name		pg_receivewal		psql
+# write:
+./psql -U postgres
+# give pass then terminal connects to the server!!! and use postgresql using terminal xD
