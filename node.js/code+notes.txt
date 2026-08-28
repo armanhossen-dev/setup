@@ -1,0 +1,170 @@
+## notes / commands:
+
+nvm --version 
+# 0.40.4, version of nvm
+
+nvm ls-remote 
+# will show the list availabe versions of node remotely
+
+#install latest LTS
+#nvm install version
+# to find the latest LTM scroll the list and 
+# end to start look for the 'latest LTS'  writings, copy the version
+#for now it's = v24.20.0   (Latest LTS: Krypton)
+
+#before install see the current node i am using;
+node -v
+# v24.12.0
+
+nvm install v24.20.0
+#let it install wait for a sec.
+node -v
+# v24.20.0
+npm -v
+# 11.19.0
+nvm -v 
+# 0.40.7, it didn't changed
+
+# npm = node package manager
+# while installing the desired node version it auto installs the npm for that version.
+
+
+# to see the installed nvm list
+nvm ls
+-------------------------------------
+       v24.12.0
+       v24.15.0
+->     v24.20.0
+        v25.2.1
+        v26.8.1
+         system (-> v24.13.0)
+default -> v24.12.0
+iojs -> N/A (default)
+unstable -> N/A (default)
+node -> stable (-> v26.8.1) (default)
+stable -> 26.8 (-> v26.8.1) (default)
+lts/* -> lts/krypton (-> v24.20.0)
+lts/argon -> v4.9.1 (-> N/A)
+lts/boron -> v6.17.1 (-> N/A)
+lts/carbon -> v8.17.0 (-> N/A)
+lts/dubnium -> v10.24.1 (-> N/A)
+lts/erbium -> v12.22.12 (-> N/A)
+lts/fermium -> v14.21.3 (-> N/A)
+lts/gallium -> v16.20.2 (-> N/A)
+lts/hydrogen -> v18.20.8 (-> N/A)
+lts/iron -> v20.20.2 (-> N/A)
+lts/jod -> v22.23.2 (-> N/A)
+lts/krypton -> v24.20.0
+-------------------------------------
+N/A = means this versions are not installed
+# also this list shows the previous lts list with their versions
+
+# let's install the previous lts version 
+# also when we install any node then that version gets set as the current node version
+nvm install v22.23.2
+# Now using node v22.23.2 (npm v10.9.8)
+
+clear
+nvm ls
+-------------------------------------
+->     v22.23.2
+       v24.12.0
+       v24.15.0
+       v24.20.0
+        v25.2.1
+        v26.8.1
+         system (-> v24.13.0)
+default -> v24.12.0
+iojs -> N/A (default)
+unstable -> N/A (default)
+node -> stable (-> v26.8.1) (default)
+stable -> 26.8 (-> v26.8.1) (default)
+lts/* -> lts/krypton (-> v24.20.0)
+lts/argon -> v4.9.1 (-> N/A)
+lts/boron -> v6.17.1 (-> N/A)
+lts/carbon -> v8.17.0 (-> N/A)
+lts/dubnium -> v10.24.1 (-> N/A)
+lts/erbium -> v12.22.12 (-> N/A)
+lts/fermium -> v14.21.3 (-> N/A)
+lts/gallium -> v16.20.2 (-> N/A)
+lts/hydrogen -> v18.20.8 (-> N/A)
+lts/iron -> v20.20.2 (-> N/A)
+lts/jod -> v22.23.2
+lts/krypton -> v24.20.0
+-------------------------------------
+
+# now to chose other version
+# nvm use version
+nvm use v24.12.0
+# Now using node v24.12.0 (npm v11.16.0)
+
+# now creating a demo project to run node script
+cd
+cd Documents
+# for me i will get into this repo folder
+# by cd Documents , ls, then cd other folders then ...
+
+mkdir nodeDemo 
+#this makes a project folder name nodeDemo
+
+cd  nodeDemo
+# get into the folder 
+
+npm init -y
+making project's package.json file
+
+ls
+# package.json, ls sees the folders file and other folder list, shows that
+
+touch index.js 
+# touch command is use for creating files
+# it creats index.js file in that folder
+# now
+code . (enter press)
+that folder will be open on vs code [if previously vs code installed]
+
+
+
+###############################################################################
+# lets test the node:
+
+go back to the node.js website : https://nodejs.org/en
+- we can see there
+-- create an http server code
+------------------------------------------------------------------------------
+// server.mjs
+import { createServer } from 'node:http';
+
+const server = createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Hello World!\n');
+});
+
+// starts a simple http server locally on port 3000
+server.listen(3000, '127.0.0.1', () => {
+  console.log('Listening on 127.0.0.1:3000');
+});
+
+// run with `node server.mjs`
+------------------------------------------------------------------------------
+
+now to run this follow the last line
+// run with `node server.mjs`
+
+- it says .mjs , now go to the folders package.json file, 
+- - change the last "type": "commonjs" to "module"
+
+now go to the terminal of that folder (it means the folders directory 
+like this       'device@ahrn-Mac-mini nodeDemo % '      then)
+
+# run this server
+node index.js 
+# Listening on 127.0.0.1:3000
+#goto this ip: 127.0.0.1:3000
+Hello World!
+
+# the server is running....
+# to stop it running, 
+ctrl + c
+
+# done. thanks to: https://youtu.be/yPmxCBrplcU
