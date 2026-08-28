@@ -1,0 +1,22 @@
+#!/bin/zsh
+cd /Library/PostgreSQL/18/bin
+./psql -U postgres
+
+PostgreSQL.app
+Open Script Editor on your Mac and paste:
+----------------------------------------------------------------------
+tell application "Terminal"
+    activate
+    do script "cd /Library/PostgreSQL/18/bin && ./psql -U postgres"
+end tell
+----------------------------------------------------------------------
+
+Then choose:
+    File → Export
+    Set:
+        File Format: Application
+        Name: PostgreSQL
+    Save it wherever you want, such as Applications.
+
+Then you can simply:
+Double-click PostgreSQL.app → Terminal opens → psql starts.
