@@ -1,0 +1,75 @@
+following: https://youtu.be/z1BHd7KhPHg
+
+---------------------------- prerequisites ---------------------------- 
+install node, and vs code 
+then, 
+
+---------------------------- next.js ---------------------------- 
+goto web: https://nextjs.org/
+click- get started
+tab full screen 
+- installation or https://nextjs.org/docs/app/getting-started/installation
+
+to create nextjs project:
+# before starting, in terminal navigate to the folder next.js, then
+
+npx create-next-app@latest
+# it will show options to proceed press y
+# use tab button
+# then select the 3rd option to select   "No, customize settings"
+
+
+## use tab button to navigate and enter to continue
+for this dmeo project i will be using
+- no typescript
+- yes eslint
+- no tailwindcss
+then all yes
+
+----------------------------------------
+Installing dependencies:
+- next
+- react
+- react-dom
+
+Installing devDependencies:
+- babel-plugin-react-compiler
+- eslint
+- eslint-config-next
+----------------------------------------
+after a moment, 
+Success! Created demo at /Users/armanhossenripon/Documents/GitHub/setup/next.js/demo
+
+now here i have the folder and in our project folder, 
+    we have the entire project structure.
+
+    inside src/app we have the codding files
+
+
+notes:
+Then, add the following scripts to your package.json file:
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  }
+}
+
+# to run this project, we need to move to the dir of that project folder in the terminal
+#to run the project:
+
+npm run dev 
+
+
+now it gives some link:
+local link = default code which is pre loaded, here our application will be get displayed
+- Local:         http://localhost:3000
+- Network:       http://127.0.2.2:3000
+to change the app go edit in the src/app/page.js file
+
+# remember the longer the terminal is open the website is  hosted to that local host ip,
+# if i close the terminal then it will also not host the website....
+to close the server or turn off, use = ctrl + c
